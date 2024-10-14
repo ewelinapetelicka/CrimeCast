@@ -1,0 +1,460 @@
+{
+  "serialKillers": [
+    {
+      "id": 1,
+      "name": "Luis Garavito",
+      "alias": "La Bestia",
+      "country": "Colombia",
+      "victims": 138,
+      "active_years": "1992-1999"
+    },
+    {
+      "id": 2,
+      "name": "Pedro López",
+      "alias": "Monster of the Andes",
+      "country": "Colombia",
+      "victims": 110,
+      "active_years": "1969-1980"
+    },
+    {
+      "id": 3,
+      "name": "Daniel Camargo Barbosa",
+      "alias": "The Charquito Beast",
+      "country": "Ecuador/Colombia",
+      "victims": 72,
+      "active_years": "1974-1986"
+    },
+    {
+      "id": 4,
+      "name": "Pedro Rodrigues Filho",
+      "alias": "Pedrinho Matador",
+      "country": "Brazil",
+      "victims": 71,
+      "active_years": "1967-2003"
+    },
+    {
+      "id": 5,
+      "name": "Andrei Chikatilo",
+      "alias": "Butcher of Rostov",
+      "country": "Russia",
+      "victims": 52,
+      "active_years": "1978-1990"
+    },
+    {
+      "id": 6,
+      "name": "Gary Leon Ridgway",
+      "alias": "Green River Killer",
+      "country": "USA",
+      "victims": 48,
+      "active_years": "1982-2001"
+    },
+    {
+      "id": 7,
+      "name": "Dean Corll",
+      "alias": "Candy Man",
+      "country": "USA",
+      "victims": 28,
+      "active_years": "1970-1973"
+    },
+    {
+      "id": 8,
+      "name": "John Wayne Gacy",
+      "alias": "Killer Clown",
+      "country": "USA",
+      "victims": 33,
+      "active_years": "1972-1978"
+    },
+    {
+      "id": 9,
+      "name": "Jeffrey Dahmer",
+      "alias": "Milwaukee Cannibal",
+      "country": "USA",
+      "victims": 17,
+      "active_years": "1978-1991"
+    },
+    {
+      "id": 10,
+      "name": "Richard Ramirez",
+      "alias": "Night Stalker",
+      "country": "USA",
+      "victims": 13,
+      "active_years": "1984-1985"
+    },
+    {
+      "id": 11,
+      "name": "Pedro Nakada Ludeña",
+      "alias": "The Monster of Puente Piedra",
+      "country": "Peru",
+      "victims": 25,
+      "active_years": "2000-2006"
+    },
+    {
+      "id": 12,
+      "name": "Yang Xinhai",
+      "alias": "Monster Killer",
+      "country": "China",
+      "victims": 65,
+      "active_years": "1999-2003"
+    },
+    {
+      "id": 13,
+      "name": "Anatoly Onoprienko",
+      "alias": "The Beast of Ukraine",
+      "country": "Ukraine",
+      "victims": 52,
+      "active_years": "1989-1996"
+    },
+    {
+      "id": 14,
+      "name": "Alexander Pichushkin",
+      "alias": "Chessboard Killer",
+      "country": "Russia",
+      "victims": 48,
+      "active_years": "1992-2006"
+    },
+    {
+      "id": 15,
+      "name": "Mikhail Popkov",
+      "alias": "The Werewolf",
+      "country": "Russia",
+      "victims": 78,
+      "active_years": "1992-2010"
+    },
+    {
+      "id": 16,
+      "name": "Moses Sithole",
+      "alias": "The ABC Killer",
+      "country": "South Africa",
+      "victims": 38,
+      "active_years": "1994-1995"
+    },
+    {
+      "id": 17,
+      "name": "Tsutomu Miyazaki",
+      "alias": "The Otaku Murderer",
+      "country": "Japan",
+      "victims": 4,
+      "active_years": "1988-1989"
+    },
+    {
+      "id": 18,
+      "name": "Ahmad Suradji",
+      "alias": "The Sorcerer",
+      "country": "Indonesia",
+      "victims": 42,
+      "active_years": "1986-1997"
+    },
+    {
+      "id": 19,
+      "name": "Andres Escobar Oviedo",
+      "alias": "The Sadist of El Charquito",
+      "country": "Colombia",
+      "victims": 34,
+      "active_years": "1999-2012"
+    },
+    {
+      "id": 20,
+      "name": "Cedric Maake",
+      "alias": "The Wemmer Pan Killer",
+      "country": "South Africa",
+      "victims": 27,
+      "active_years": "1996-1997"
+    },
+    {
+      "id": 21,
+      "name": "Raman Raghav",
+      "alias": "Psycho Raman",
+      "country": "India",
+      "victims": 41,
+      "active_years": "1965-1968"
+    },
+    {
+      "id": 22,
+      "name": "Sailson Jose das Gracas",
+      "alias": "None",
+      "country": "Brazil",
+      "victims": 41,
+      "active_years": "1991-2014"
+    },
+    {
+      "id": 23,
+      "name": "Gao Chengyong",
+      "alias": "China's Jack the Ripper",
+      "country": "China",
+      "victims": 11,
+      "active_years": "1988-2002"
+    },
+    {
+      "id": 24,
+      "name": "Kampatimar Shankariya",
+      "alias": "None",
+      "country": "India",
+      "victims": 70,
+      "active_years": "1977-1978"
+    },
+    {
+      "id": 25,
+      "name": "Henry Lee Lucas",
+      "alias": "The Confession Killer",
+      "country": "USA",
+      "victims": 11,
+      "active_years": "1960-1983"
+    },
+    {
+      "id": 26,
+      "name": "Dennis Rader",
+      "alias": "BTK Killer",
+      "country": "USA",
+      "victims": 10,
+      "active_years": "1974-1991"
+    },
+    {
+      "id": 27,
+      "name": "Richard Chase",
+      "alias": "The Vampire of Sacramento",
+      "country": "USA",
+      "victims": 6,
+      "active_years": "1977-1978"
+    },
+    {
+      "id": 28,
+      "name": "Ivan Milat",
+      "alias": "The Backpacker Murderer",
+      "country": "Australia",
+      "victims": 7,
+      "active_years": "1989-1993"
+    },
+    {
+      "id": 29,
+      "name": "Carl Panzram",
+      "alias": "None",
+      "country": "USA",
+      "victims": 21,
+      "active_years": "1915-1929"
+    },
+    {
+      "id": 30,
+      "name": "Rodney Alcala",
+      "alias": "The Dating Game Killer",
+      "country": "USA",
+      "victims": 8,
+      "active_years": "1968-1979"
+    },
+    {
+      "id": 31,
+      "name": "Aileen Wuornos",
+      "alias": "None",
+      "country": "USA",
+      "victims": 7,
+      "active_years": "1989-1990"
+    },
+    {
+      "id": 32,
+      "name": "Edmund Kemper",
+      "alias": "The Co-ed Killer",
+      "country": "USA",
+      "victims": 10,
+      "active_years": "1964-1973"
+    },
+    {
+      "id": 33,
+      "name": "Joseph James DeAngelo",
+      "alias": "Golden State Killer",
+      "country": "USA",
+      "victims": 13,
+      "active_years": "1974-1986"
+    },
+    {
+      "id": 34,
+      "name": "David Berkowitz",
+      "alias": "Son of Sam",
+      "country": "USA",
+      "victims": 6,
+      "active_years": "1976-1977"
+    },
+    {
+      "id": 35,
+      "name": "Robert Hansen",
+      "alias": "The Butcher Baker",
+      "country": "USA",
+      "victims": 17,
+      "active_years": "1971-1983"
+    },
+    {
+      "id": 36,
+      "name": "Leonard Lake and Charles Ng",
+      "alias": "None",
+      "country": "USA",
+      "victims": 11,
+      "active_years": "1983-1985"
+    },
+    {
+      "id": 37,
+      "name": "Fred and Rosemary West",
+      "alias": "None",
+      "country": "UK",
+      "victims": 12,
+      "active_years": "1967-1987"
+    },
+    {
+      "id": 38,
+      "name": "Peter Sutcliffe",
+      "alias": "The Yorkshire Ripper",
+      "country": "UK",
+      "victims": 13,
+      "active_years": "1975-1980"
+    },
+    {
+      "id": 39,
+      "name": "Robert Black",
+      "alias": "None",
+      "country": "UK",
+      "victims": 4,
+      "active_years": "1981-1986"
+    },
+    {
+      "id": 40,
+      "name": "Dennis Nilsen",
+      "alias": "The Muswell Hill Murderer",
+      "country": "UK",
+      "victims": 12,
+      "active_years": "1978-1983"
+    },
+    {
+      "id": 41,
+      "name": "Harold Shipman",
+      "alias": "Dr. Death",
+      "country": "UK",
+      "victims": 218,
+      "active_years": "1975-1998"
+    },
+    {
+      "id": 42,
+      "name": "Dean Corll",
+      "alias": "The Candy Man",
+      "country": "USA",
+      "victims": 28,
+      "active_years": "1970-1973"
+    },
+    {
+      "id": 43,
+      "name": "Kenneth Bianchi and Angelo Buono",
+      "alias": "The Hillside Stranglers",
+      "country": "USA",
+      "victims": 10,
+      "active_years": "1977-1978"
+    },
+    {
+      "id": 44,
+      "name": "Richard Cottingham",
+      "alias": "The Torso Killer",
+      "country": "USA",
+      "victims": 11,
+      "active_years": "1967-1980"
+    },
+    {
+      "id": 45,
+      "name": "Joel Rifkin",
+      "alias": "Joel the Ripper",
+      "country": "USA",
+      "victims": 17,
+      "active_years": "1989-1993"
+    },
+    {
+      "id": 46,
+      "name": "Arthur Shawcross",
+      "alias": "The Genesee River Killer",
+      "country": "USA",
+      "victims": 14,
+      "active_years": "1972-1990"
+    },
+    {
+      "id": 47,
+      "name": "Robert Berdella",
+      "alias": "The Kansas City Butcher",
+      "country": "USA",
+      "victims": 6,
+      "active_years": "1984-1987"
+    },
+    {
+      "id": 48,
+      "name": "H. H. Holmes",
+      "alias": "The Beast of Chicago",
+      "country": "USA",
+      "victims": 27,
+      "active_years": "1891-1894"
+    },
+    {
+      "id": 49,
+      "name": "Albert Fish",
+      "alias": "The Gray Man",
+      "country": "USA",
+      "victims": 3,
+      "active_years": "1924-1932"
+    },
+    {
+      "id": 50,
+      "name": "William Bonin",
+      "alias": "The Freeway Killer",
+      "country": "USA",
+      "victims": 21,
+      "active_years": "1979-1980"
+    },
+    {
+      "id": 51,
+      "name": "Earle Nelson",
+      "alias": "The Gorilla Killer",
+      "country": "USA",
+      "victims": 22,
+      "active_years": "1926-1927"
+    },
+    {
+      "id": 52,
+      "name": "Joachim Kroll",
+      "alias": "The Ruhr Hunter",
+      "country": "Germany",
+      "victims": 14,
+      "active_years": "1955-1976"
+    },
+    {
+      "id": 53,
+      "name": "Paul Ogorzow",
+      "alias": "The S-Bahn Murderer",
+      "country": "Germany",
+      "victims": 8,
+      "active_years": "1940-1941"
+    },
+    {
+      "id": 54,
+      "name": "Fritz Haarmann",
+      "alias": "The Butcher of Hanover",
+      "country": "Germany",
+      "victims": 24,
+      "active_years": "1918-1924"
+    },
+    {
+      "id": 55,
+      "name": "Karl Denke",
+      "alias": "The Cannibal of Ziębice",
+      "country": "Germany",
+      "victims": 30,
+      "active_years": "1903-1924"
+    },
+    {
+      "id": 56,
+      "name": "Peter Kürten",
+      "alias": "The Vampire of Düsseldorf",
+      "country": "Germany",
+      "victims": 9,
+      "active_years": "1929-1930"
+    },
+    {
+      "id": 57,
+      "name": "Marcel Petiot",
+      "alias": "Doctor Satan",
+      "country": "France",
+      "victims": 60,
+      "active_years": "1926-1944"
+    }
+  ]
+}
