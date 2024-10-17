@@ -1,7 +1,18 @@
 import {SerialKillersList} from "./modules/serial-killers/pages/SerialKillersList.tsx";
 import {Header} from "./components/header/Header.tsx";
+import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 
 function App() {
+    const router = createBrowserRouter([
+        {
+            path: "/serial-killers-list",
+            element: <SerialKillersList/>,
+        },
+        {
+            path:"*",
+            element:<Navigate to={"/serial-killers-list"}/>
+        }
+    ]);
 
     return (
         <div className={"h-screen"}>
@@ -9,7 +20,7 @@ function App() {
                 <Header></Header>
             </div>
             <div className={"h-[90%] overflow-auto"}>
-                <SerialKillersList/>
+                <RouterProvider router={router}/>
             </div>
         </div>
     )
