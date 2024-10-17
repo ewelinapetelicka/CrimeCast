@@ -16,7 +16,7 @@ export function SerialKillersList() {
     }, []);
 
     return (
-        <div>{serialKillersList.map((killer) => {
+        <div className={"flex flex-col bg-zinc-900"}>{serialKillersList.map((killer) => {
             return (
                 <p>{killer.name}</p>
             )
