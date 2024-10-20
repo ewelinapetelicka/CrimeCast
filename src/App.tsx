@@ -9,8 +9,8 @@ function App() {
             element: <SerialKillersList/>,
         },
         {
-            path:"*",
-            element:<Navigate to={"/serial-killers-list"}/>
+            path: "*",
+            element: <Navigate to={"/serial-killers-list"}/>
         }
     ]);
 

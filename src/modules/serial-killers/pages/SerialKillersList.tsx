@@ -1,6 +1,7 @@
 import axios, {AxiosResponse} from 'axios';
 import {useEffect, useState} from "react";
 import {SerialKiller} from "../../../models/serial-killer.ts";
+import {PageContainer} from "../../../components/page-container/PageContainer.tsx";
 
 export function SerialKillersList() {
     const [serialKillersList, setSerialKillersList] = useState<SerialKiller[]>([]);
@@ -16,10 +17,12 @@ export function SerialKillersList() {
     }, []);
 
     return (
-        <div className={"flex flex-col bg-zinc-900"}>{serialKillersList.map((killer) => {
-            return (
-                <p>{killer.name}</p>
-            )
-        })}</div>
+        <PageContainer>
+            {serialKillersList.slice(0, 9).map((killer) => {
+                return (
+                    <p>{killer.name}</p>
+                )
+            })}
+        </PageContainer>
     )
 }
