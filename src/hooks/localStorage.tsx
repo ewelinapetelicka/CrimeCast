@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 
 export function useLocalStorage<T>(key: string, defaultValue?: T) {
     const [itemByKey, setItemByKey] = useState<any>(undefined);
-
     useEffect(() => {
         let value = localStorage.getItem(key)
         if (!value) {

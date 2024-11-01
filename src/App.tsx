@@ -3,6 +3,7 @@ import {Header} from "./components/header/Header.tsx";
 import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 
 function App() {
+    //const [theme, setTheme] = useState("dark")
     const router = createBrowserRouter([
         {
             path: "/serial-killers-list",
@@ -15,6 +16,9 @@ function App() {
     ]);
 
     return (
+        /*
+                <ThemeContext.Provider value={{value: theme, setValue: setTheme}}>
+        */
         <div className={"h-screen"}>
             <div className={"h-[10%]"}>
                 <Header></Header>
