@@ -5,12 +5,14 @@ import {PageContainer} from "../../../components/page-container/PageContainer.ts
 import {Pagination} from "../../../components/pagination/Pagination.tsx";
 import {Paginated} from "../../../models/paginated.ts";
 import {KillersTable} from "../../../components/killers-table/KillersTable.tsx";
+import {Search} from "../../../components/search/Search.tsx";
 
 export function SerialKillersList() {
     const [serialKillersList, setSerialKillersList] = useState<SerialKiller[]>([]);
     const [currentPage, setCurrentPage] = useState(0);
     const elementsPerPage = 10
     const [totalElements, setTotalElements] = useState(0);
+    const [query, setQuery] = useState("")
 
     useEffect(() => {
         axios.get('http://localhost:8000/serialKillers?_page=' + (currentPage + 1) + "&_per_page=" + elementsPerPage)
@@ -22,6 +24,7 @@ export function SerialKillersList() {
 
     return (
         <PageContainer>
+            <Search onChange={(query) => setQuery(query)} value={query} onClick={() => setQuery("")}></Search>
             <KillersTable killers={serialKillersList}></KillersTable>
             <Pagination prev={() => setCurrentPage(currentPage - 1)} disabledPrev={currentPage === 0}
                         next={() => setCurrentPage(currentPage + 1)}
