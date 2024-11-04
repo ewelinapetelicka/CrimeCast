@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import {SerialKiller} from "../../../models/serial-killer.ts";
 import {PageContainer} from "../../../components/page-container/PageContainer.tsx";
 import {Pagination} from "../../../components/pagination/Pagination.tsx";
-import {Paginated} from "../../../models/paginated.ts";
 import {KillersTable} from "../../../components/killers-table/KillersTable.tsx";
 import {Search} from "../../../components/search/Search.tsx";
 
@@ -13,14 +12,15 @@ export function SerialKillersList() {
     const elementsPerPage = 10
     const [totalElements, setTotalElements] = useState(0);
     const [query, setQuery] = useState("")
+    
 
     useEffect(() => {
-        axios.get('http://localhost:8000/serialKillers?_page=' + (currentPage + 1) + "&_per_page=" + elementsPerPage)
-            .then(function (response: AxiosResponse<Paginated<SerialKiller>>) {
-                setSerialKillersList(response.data.data);
-                setTotalElements(response.data.items)
+        axios.get('http://localhost:8000/serialKillers?q=' + query + '&_page=' + (currentPage + 1) + "&_per_page=" + elementsPerPage)
+            .then(function (response: AxiosResponse<SerialKiller[]>) {
+                setSerialKillersList(response.data);
+                setTotalElements(parseInt(response.headers['x-total-count']))
             })
-    }, [currentPage]);
+    }, [query, currentPage]);
 
     return (
         <PageContainer>
