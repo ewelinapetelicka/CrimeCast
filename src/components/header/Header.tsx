@@ -1,4 +1,5 @@
 import {TabButton} from "../tab-button/TabButton.tsx";
+import {IoMenuOutline} from "react-icons/io5";
 
 export function Header() {
 
@@ -11,7 +12,9 @@ export function Header() {
                     <TabButton label={"Serial killers"} onClick={() => 0}></TabButton>
                     <TabButton label={"Unsolved cases"} onClick={() => 0}></TabButton>
                 </section>
-                <span className={"text-2xl font-bold pr-6"}>=</span>
+                <span className={"text-2xl font-bold pr-6"}>
+                    <IoMenuOutline/>
+                </span>
             </article>
         </section>
     )

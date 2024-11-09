@@ -5,17 +5,21 @@ import {PageContainer} from "../../../components/page-container/PageContainer.ts
 import {Pagination} from "../../../components/pagination/Pagination.tsx";
 import {KillersTable} from "../../../components/killers-table/KillersTable.tsx";
 import {Search} from "../../../components/search/Search.tsx";
+import {createURLWithQueryParams} from "../../../utils/http.utils.tsx";
 
 export function SerialKillersList() {
     const [serialKillersList, setSerialKillersList] = useState<SerialKiller[]>([]);
     const [currentPage, setCurrentPage] = useState(0);
-    const elementsPerPage = 10
+    const elementsPerPage = 10;
     const [totalElements, setTotalElements] = useState(0);
-    const [query, setQuery] = useState("")
-    
+    const [query, setQuery] = useState("");
 
     useEffect(() => {
-        axios.get('http://localhost:8000/serialKillers?q=' + query + '&_page=' + (currentPage + 1) + "&_per_page=" + elementsPerPage)
+        axios.get(createURLWithQueryParams("http://localhost:8000/serialKillers", {
+            q: query,
+            _page: currentPage + 1,
+            _per_page: elementsPerPage
+        }))
             .then(function (response: AxiosResponse<SerialKiller[]>) {
                 setSerialKillersList(response.data);
                 setTotalElements(parseInt(response.headers['x-total-count']))
