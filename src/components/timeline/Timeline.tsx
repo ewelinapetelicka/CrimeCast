@@ -1,6 +1,5 @@
 import {GoDotFill} from "react-icons/go";
 
-// <LuTally1 className={"h-14"}/>
 export interface TimeLineCard {
     date: string | number;
     title: string;

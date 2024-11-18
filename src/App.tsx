@@ -4,7 +4,6 @@ import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import {SerialKillerDetails} from "./modules/serial-killers/pages/SerialKillerDetails.tsx";
 
 function App() {
-    //const [theme, setTheme] = useState("dark")
     const router = createBrowserRouter([
         {
             path: "/serial-killers",

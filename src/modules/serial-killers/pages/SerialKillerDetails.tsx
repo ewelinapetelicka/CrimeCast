@@ -6,7 +6,7 @@ import {useParams} from "react-router-dom";
 import {Profile} from "../components/profile/Profile.tsx";
 
 export function SerialKillerDetails() {
-    const [killer, setKiller] = useState<SerialKiller>()
+    const [killer, setKiller] = useState<SerialKiller>();
     const {id} = useParams();
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export function SerialKillerDetails() {
     }, []);
 
     if (!killer) {
-        return
+        return;
     }
 
     return (

@@ -3,7 +3,7 @@ import {TimeLineCard} from "../../../components/timeline/Timeline.tsx";
 
 export function killersToTimelineCardUtils(killer: SerialKiller): TimeLineCard[] {
 
-    const cards: TimeLineCard[] = []
+    const cards: TimeLineCard[] = [];
     let i = 0;
     if (killer.born !== "Unknown") {
         cards.push({
@@ -52,6 +52,5 @@ export function killersToTimelineCardUtils(killer: SerialKiller): TimeLineCard[]
         })
     }
 
-
-    return cards
+    return cards;
 }

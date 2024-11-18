@@ -1,13 +1,18 @@
 import {SerialKiller} from "../../../../models/serial-killer.ts";
 import {Timeline} from "../../../../components/timeline/Timeline.tsx";
 import {killersToTimelineCardUtils} from "../../utils/killers-to-timeline-card.utils.tsx";
+import {useState} from "react";
+import {Map} from "../map/Map.tsx";
 
 interface ProfileProps {
     killer: SerialKiller;
 }
 
+export type ViewType = "Timeline" | "Map";
 
 export function Profile(props: ProfileProps) {
+    const [view, setView] = useState<ViewType>('Timeline');
+
     function status(status: any) {
         if (status !== null && status !== "Alive") {
             return (
@@ -17,13 +22,12 @@ export function Profile(props: ProfileProps) {
                     <><span>Cause of death: </span>
                     <span>{status}</span></>
                 </div>
-            )
+            );
         }
         if (status === "Alive") {
-            return "Alive"
-        } else return "Unknown"
+            return "Alive";
+        } else return "Unknown";
     }
-
 
     return (
         <section className={"flex justify-evenly pr-3"}>
@@ -48,7 +52,14 @@ export function Profile(props: ProfileProps) {
                 </section>
                 <span>{props.killer.bio}</span>
             </article>
-            <Timeline cards={killersToTimelineCardUtils(props.killer)}></Timeline>
+            {view === "Timeline" ? (
+                <div className={"flex flex-col"}>
+                    <button onClick={() => setView("Map")}>see map</button>
+                    <Timeline cards={killersToTimelineCardUtils(props.killer)}></Timeline>
+                </div>
+            ) : (
+                <Map onCloseClick={() => setView("Timeline")}/>
+            )}
         </section>
     )
 }
