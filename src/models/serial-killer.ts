@@ -18,12 +18,12 @@ interface Victim {
     "date": string,
     "location": string,
     "method": string,
-    "causeOfDeath": string,
+    "causeOfDeath"?: string,
     "timeBetweenAttackAndDiscovery": string,
     "relationshipToKiller": null,
     "circumstancesOfAbduction": string,
     "lastSeen": {
-        "location": string
+        "location": string,
         "time": string
     },
     "discoveryLocation": {

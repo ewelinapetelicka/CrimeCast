@@ -1,17 +1,22 @@
 import {SerialKillersList} from "./modules/serial-killers/pages/SerialKillersList.tsx";
 import {Header} from "./components/header/Header.tsx";
 import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
+import {SerialKillerDetails} from "./modules/serial-killers/pages/SerialKillerDetails.tsx";
 
 function App() {
     //const [theme, setTheme] = useState("dark")
     const router = createBrowserRouter([
         {
-            path: "/serial-killers-list",
+            path: "/serial-killers",
             element: <SerialKillersList/>,
         },
         {
+            path: "/serial-killers/:id",
+            element: <SerialKillerDetails/>,
+        },
+        {
             path: "*",
-            element: <Navigate to={"/serial-killers-list"}/>
+            element: <Navigate to={"/serial-killers"}/>
         }
     ]);
 

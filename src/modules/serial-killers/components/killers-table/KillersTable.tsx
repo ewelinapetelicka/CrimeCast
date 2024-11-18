@@ -1,7 +1,8 @@
-import {SerialKiller} from "../../models/serial-killer.ts";
+import {SerialKiller} from "../../../../models/serial-killer.ts";
 
 interface KillersTableProps {
-    killers: SerialKiller[]
+    killers: SerialKiller[];
+    onClick: (killerId: number) => void;
 }
 
 export function KillersTable(props: KillersTableProps) {
@@ -18,13 +19,12 @@ export function KillersTable(props: KillersTableProps) {
             <tbody>
             {props.killers.map((killer) => {
                 return (
-                    <>
-                        <tr>
-                            <td className={"pl-4 text-neutral-50"}>{killer.name}</td>
-                            <td className={"text-neutral-300"}>{killer.alias}</td>
-                            <td className={"text-neutral-300"}>{killer.country}</td>
-                        </tr>
-                    </>
+                    <tr key={killer.id}>
+                        <td className={"pl-4 text-neutral-50 hover:underline cursor-pointer"}
+                            onClick={() => props.onClick(killer.id)}>{killer.name}</td>
+                        <td className={"text-neutral-300"}>{killer.alias}</td>
+                        <td className={"text-neutral-300"}>{killer.country}</td>
+                    </tr>
                 )
             })}
             </tbody>

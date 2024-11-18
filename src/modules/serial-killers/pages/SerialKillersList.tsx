@@ -3,9 +3,10 @@ import {useEffect, useState} from "react";
 import {SerialKiller} from "../../../models/serial-killer.ts";
 import {PageContainer} from "../../../components/page-container/PageContainer.tsx";
 import {Pagination} from "../../../components/pagination/Pagination.tsx";
-import {KillersTable} from "../../../components/killers-table/KillersTable.tsx";
+import {KillersTable} from "../components/killers-table/KillersTable.tsx";
 import {Search} from "../../../components/search/Search.tsx";
 import {createURLWithQueryParams} from "../../../utils/http.utils.tsx";
+import {useNavigate} from "react-router-dom";
 
 export function SerialKillersList() {
     const [serialKillersList, setSerialKillersList] = useState<SerialKiller[]>([]);
@@ -13,6 +14,7 @@ export function SerialKillersList() {
     const elementsPerPage = 10;
     const [totalElements, setTotalElements] = useState(0);
     const [query, setQuery] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get(createURLWithQueryParams("http://localhost:8000/serialKillers", {
@@ -27,9 +29,10 @@ export function SerialKillersList() {
     }, [query, currentPage]);
 
     return (
-        <PageContainer>
+        <PageContainer class={"flex flex-col justify-between items-center"} scroll={false}>
             <Search onChange={(query) => setQuery(query)} value={query} onClick={() => setQuery("")}></Search>
-            <KillersTable killers={serialKillersList}></KillersTable>
+            <KillersTable killers={serialKillersList}
+                          onClick={(killerId) => navigate("/serial-killers/" + killerId)}></KillersTable>
             <Pagination prev={() => setCurrentPage(currentPage - 1)} disabledPrev={currentPage === 0}
                         next={() => setCurrentPage(currentPage + 1)}
                         disabledNext={Math.ceil(totalElements / elementsPerPage) === currentPage}
