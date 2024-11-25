@@ -1,10 +1,10 @@
 import {SerialKiller} from "../../../models/serial-killer.ts";
-import {TimeLineCard} from "../../../components/timeline/Timeline.tsx";
+import {TimeLineCard} from "../components/timeline/Timeline.tsx";
 
 export function killersToTimelineCardUtils(killer: SerialKiller): TimeLineCard[] {
-
     const cards: TimeLineCard[] = [];
     let i = 0;
+
     if (killer.born !== "Unknown") {
         cards.push({
             date: killer.born,
@@ -12,6 +12,7 @@ export function killersToTimelineCardUtils(killer: SerialKiller): TimeLineCard[]
             description: killer.country
         })
     }
+
     cards.push({
         date: killer.startYear,
         title: "- beginning of the activity"
@@ -25,6 +26,7 @@ export function killersToTimelineCardUtils(killer: SerialKiller): TimeLineCard[]
         })
         i++
     }
+
     cards.push({
         date: killer.endYear,
         title: "- end of the activity"
@@ -37,6 +39,7 @@ export function killersToTimelineCardUtils(killer: SerialKiller): TimeLineCard[]
             description: killer.capturedBy
         })
     }
+
     if (killer.trialStart !== null) {
         cards.push({
             date: killer.trialStart,
