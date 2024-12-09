@@ -1,18 +1,30 @@
 import {SerialKillersList} from "./modules/serial-killers/pages/SerialKillersList.tsx";
-import {Header} from "./components/header/Header.tsx";
 import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import {SerialKillerDetails} from "./modules/serial-killers/pages/SerialKillerDetails.tsx";
+import {UnsolvedCasesList} from "./modules/unsolved-cases/pages/UnsolvedCasesList.tsx";
+import {AppLayout} from "./AppLayout.tsx";
 
 function App() {
     const router = createBrowserRouter([
         {
-            path: "/serial-killers",
-            element: <SerialKillersList/>,
+            path: '',
+            element: <AppLayout/>,
+            children: [
+                {
+                    path: "/serial-killers",
+                    element: <SerialKillersList/>,
+                },
+                {
+                    path: "/serial-killers/:id",
+                    element: <SerialKillerDetails/>,
+                },
+                {
+                    path: "/unsolved-cases",
+                    element: <UnsolvedCasesList/>,
+                },
+            ]
         },
-        {
-            path: "/serial-killers/:id",
-            element: <SerialKillerDetails/>,
-        },
+
         {
             path: "*",
             element: <Navigate to={"/serial-killers"}/>
@@ -20,17 +32,7 @@ function App() {
     ]);
 
     return (
-        /*
-                <ThemeContext.Provider value={{value: theme, setValue: setTheme}}>
-        */
-        <div className={"h-screen"}>
-            <div className={"h-[10%]"}>
-                <Header></Header>
-            </div>
-            <div className={"h-[90%] overflow-auto"}>
-                <RouterProvider router={router}/>
-            </div>
-        </div>
+        <RouterProvider router={router}/>
     )
 }
 
