@@ -456,5 +456,157 @@
       "victims": 60,
       "active_years": "1926-1944"
     }
+  ],
+  "unsolvedCases": [
+    {
+      "caseName": "The Zodiac Killer",
+      "date": "1968-12-20",
+      "location": "Northern California, USA",
+      "description": "A serial killer claimed responsibility for at least five murders and taunted police with cryptic letters and codes.",
+      "lastKnownActivity": "1974",
+      "keyEvidence": [
+        "Cryptic letters sent to newspapers",
+        "Witness descriptions of a possible suspect"
+      ],
+      "suspects": [
+        "Unknown"
+      ],
+      "notes": "Despite extensive investigation, the identity of the killer remains unknown."
+    },
+    {
+      "caseName": "The Boy in the Box",
+      "date": "1957-02-25",
+      "location": "Philadelphia, Pennsylvania, USA",
+      "description": "The body of an unidentified boy, aged 4 to 6, was found in a cardboard box. Cause of death was blunt force trauma.",
+      "lastKnownActivity": null,
+      "keyEvidence": [
+        "The box the boy was found in",
+        "A blanket found near the body"
+      ],
+      "suspects": [
+        "Unknown"
+      ],
+      "notes": "Multiple theories have been proposed, but the boy's identity and the perpetrator remain unknown."
+    },
+    {
+      "caseName": "Madeleine McCann",
+      "date": "2007-05-03",
+      "location": "Praia da Luz, Portugal",
+      "description": "A three-year-old girl disappeared from her family’s vacation apartment.",
+      "lastKnownActivity": null,
+      "keyEvidence": [
+        "Sightings of a suspicious man near the apartment",
+        "DNA traces found in the apartment"
+      ],
+      "suspects": [
+        "Various over the years, none conclusively proven"
+      ],
+      "notes": "Despite global media coverage, the case remains unresolved."
+    },
+    {
+      "caseName": "The Black Dahlia",
+      "date": "1947-01-15",
+      "location": "Los Angeles, California, USA",
+      "description": "Elizabeth Short was found brutally murdered and mutilated. The case became one of Los Angeles’ most infamous unsolved mysteries.",
+      "lastKnownActivity": null,
+      "keyEvidence": [
+        "Crime scene photographs",
+        "Anonymous notes sent to the police"
+      ],
+      "suspects": [
+        "Multiple, none confirmed"
+      ],
+      "notes": "The case inspired countless theories but no resolution."
+    },
+    {
+      "caseName": "JonBenét Ramsey",
+      "date": "1996-12-26",
+      "location": "Boulder, Colorado, USA",
+      "description": "Six-year-old JonBenét was found murdered in her home. A ransom note was found at the scene.",
+      "lastKnownActivity": null,
+      "keyEvidence": [
+        "Handwritten ransom note",
+        "DNA evidence found on the victim's clothing"
+      ],
+      "suspects": [
+        "Family members, intruder theory"
+      ],
+      "notes": "Speculation and public interest remain high, but the case is unsolved."
+    },
+    {
+      "caseName": "The Hinterkaifeck Murders",
+      "date": "1922-03-31",
+      "location": "Hinterkaifeck, Germany",
+      "description": "Six members of the Gruber family were murdered at their remote farm. The killer is believed to have lived on the property for several days after the murders.",
+      "lastKnownActivity": null,
+      "keyEvidence": [
+        "Footprints leading to the farm but not away",
+        "The murder weapon, a mattock, found at the scene"
+      ],
+      "suspects": [
+        "Unknown"
+      ],
+      "notes": "One of Germany's most baffling mysteries."
+    },
+    {
+      "caseName": "The Sodder Children",
+      "date": "1945-12-24",
+      "location": "Fayetteville, West Virginia, USA",
+      "description": "Five children went missing after a fire destroyed the Sodder family home. Their remains were never found.",
+      "lastKnownActivity": null,
+      "keyEvidence": [
+        "A ladder found missing from its usual location",
+        "A strange phone call received by the family"
+      ],
+      "suspects": [
+        "Unknown"
+      ],
+      "notes": "Theories range from kidnapping to accidental death, but no definitive answers exist."
+    },
+    {
+      "caseName": "The Somerton Man (Tamám Shud Case)",
+      "date": "1948-12-01",
+      "location": "Adelaide, Australia",
+      "description": "An unidentified man was found dead on Somerton Beach. A coded message and a torn piece of a Persian poem were found with him.",
+      "lastKnownActivity": null,
+      "keyEvidence": [
+        "A scrap of paper with 'Tamám Shud' written on it",
+        "The code found in a book linked to the case"
+      ],
+      "suspects": [
+        "Unknown"
+      ],
+      "notes": "Theories include espionage, murder, and suicide."
+    },
+    {
+      "caseName": "D. B. Cooper",
+      "date": "1971-11-24",
+      "location": "Over Washington State, USA",
+      "description": "A man hijacked a plane, extorted $200,000, and parachuted into the wilderness, disappearing without a trace.",
+      "lastKnownActivity": null,
+      "keyEvidence": [
+        "A tie left behind on the plane",
+        "Part of the ransom money found years later"
+      ],
+      "suspects": [
+        "Various, none proven"
+      ],
+      "notes": "The FBI closed the case in 2016 without solving it."
+    },
+    {
+      "caseName": "The Springfield Three",
+      "date": "1992-06-07",
+      "location": "Springfield, Missouri, USA",
+      "description": "Three women disappeared from a home without any signs of struggle. Their whereabouts remain unknown.",
+      "lastKnownActivity": null,
+      "keyEvidence": [
+        "A broken porch light",
+        "An unidentified male voice on an answering machine"
+      ],
+      "suspects": [
+        "Various, none conclusively linked"
+      ],
+      "notes": "Decades later, the case still haunts the Springfield community."
+    }
   ]
 }
