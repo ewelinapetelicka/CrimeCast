@@ -941,6 +941,7 @@
       ]
     },
     {
+      "id": 5,
       "name": "Andrei Chikatilo",
       "alias": "Butcher of Rostov",
       "img": "https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Chikatilo-mugshot.jpg/220px-Chikatilo-mugshot.jpg",
@@ -1016,7 +1017,7 @@
             "description": "Body found in a nearby forest",
             "coordinates": {
               "latitude": 47.2239,
-              "longitude": 39.7180
+              "longitude": 39.718
             }
           },
           "injuries": [
@@ -1829,8 +1830,8 @@
           "discoveryLocation": {
             "description": "Buried at Corll's boat shed along with other victims",
             "coordinates": {
-              "latitude": 29.8000,
-              "longitude": -95.5000
+              "latitude": 29.8,
+              "longitude": -95.5
             }
           },
           "injuries": [
@@ -4117,7 +4118,7 @@
           "discoveryLocation": {
             "description": "Isolated part of Bitsa Park",
             "coordinates": {
-              "latitude": 55.5800,
+              "latitude": 55.58,
               "longitude": 37.6065
             }
           },
@@ -5853,7 +5854,7 @@
           "discoveryLocation": {
             "description": "Abandoned alley",
             "coordinates": {
-              "latitude": 19.0760,
+              "latitude": 19.076,
               "longitude": 72.8777
             }
           },
@@ -6109,8 +6110,8 @@
           "discoveryLocation": {
             "description": "Abandoned warehouse",
             "coordinates": {
-              "latitude": -22.7850,
-              "longitude": -43.3350
+              "latitude": -22.785,
+              "longitude": -43.335
             }
           },
           "injuries": [
@@ -7961,7 +7962,7 @@
             "description": "Aboard yacht in New York Harbor",
             "coordinates": {
               "latitude": 40.7128,
-              "longitude": -74.0060
+              "longitude": -74.006
             }
           },
           "injuries": [
@@ -8431,7 +8432,7 @@
             "description": "In a wooded area",
             "coordinates": {
               "latitude": 29.2108,
-              "longitude": -81.0220
+              "longitude": -81.022
             }
           },
           "injuries": [
@@ -8691,7 +8692,7 @@
             "description": "Body never found; remains believed to be disposed of near Santa Cruz mountains",
             "coordinates": {
               "latitude": 37.2304,
-              "longitude": -121.9780
+              "longitude": -121.978
             }
           },
           "injuries": [
@@ -8739,7 +8740,7 @@
             "description": "Wooded area near Santa Cruz mountains",
             "coordinates": {
               "latitude": 37.2304,
-              "longitude": -121.9780
+              "longitude": -121.978
             }
           },
           "injuries": [
@@ -8941,7 +8942,7 @@
             "description": "In her home",
             "coordinates": {
               "latitude": 34.2741,
-              "longitude": -119.2290
+              "longitude": -119.229
             }
           },
           "injuries": [
@@ -10009,7 +10010,7 @@
             "description": "In a field",
             "coordinates": {
               "latitude": 53.8008,
-              "longitude": -1.5480
+              "longitude": -1.548
             }
           },
           "injuries": [
@@ -10109,7 +10110,7 @@
           "discoveryLocation": {
             "description": "Park near Roundhay Lake in Leeds",
             "coordinates": {
-              "latitude": 53.8330,
+              "latitude": 53.833,
               "longitude": -1.4931
             }
           },
@@ -10478,8 +10479,8 @@
           "discoveryLocation": {
             "description": "In the garden",
             "coordinates": {
-              "latitude": 51.5640,
-              "longitude": -0.1400
+              "latitude": 51.564,
+              "longitude": -0.14
             }
           },
           "injuries": [
@@ -11310,8 +11311,8 @@
           "discoveryLocation": {
             "description": "Remote hillside in Glendale",
             "coordinates": {
-              "latitude": 34.1530,
-              "longitude": -118.2510
+              "latitude": 34.153,
+              "longitude": -118.251
             }
           },
           "injuries": [
@@ -11359,7 +11360,7 @@
             "description": "Hills near Mount Washington, Los Angeles",
             "coordinates": {
               "latitude": 34.0992,
-              "longitude": -118.2060
+              "longitude": -118.206
             }
           },
           "injuries": [
@@ -11682,7 +11683,7 @@
             "description": "Parked near a wooded area",
             "coordinates": {
               "latitude": 40.7128,
-              "longitude": -74.0060
+              "longitude": -74.006
             }
           },
           "injuries": [
@@ -11734,7 +11735,7 @@
           "discoveryLocation": {
             "description": "Parts of her remains were found in the Hudson River",
             "coordinates": {
-              "latitude": 40.7270,
+              "latitude": 40.727,
               "longitude": -74.0113
             }
           },
@@ -12728,7 +12729,7 @@
             "description": "Remains found in the woods",
             "coordinates": {
               "latitude": 40.7128,
-              "longitude": -74.0060
+              "longitude": -74.006
             }
           },
           "injuries": [
@@ -13789,8 +13790,8 @@
           "discoveryLocation": {
             "description": "Found in a wooded area near the tracks",
             "coordinates": {
-              "latitude": 52.5200,
-              "longitude": 13.4050
+              "latitude": 52.52,
+              "longitude": 13.405
             }
           },
           "injuries": [
@@ -15042,6 +15043,7 @@
   ],
   "unsolvedCases": [
     {
+      "id": 1,
       "caseName": "The Zodiac Killer",
       "date": "1968-12-20",
       "location": "Northern California, USA",
@@ -15057,6 +15059,7 @@
       "notes": "Despite extensive investigation, the identity of the killer remains unknown."
     },
     {
+      "id": 2,
       "caseName": "The Boy in the Box",
       "date": "1957-02-25",
       "location": "Philadelphia, Pennsylvania, USA",
@@ -15072,6 +15075,7 @@
       "notes": "Multiple theories have been proposed, but the boy's identity and the perpetrator remain unknown."
     },
     {
+      "id": 3,
       "caseName": "Madeleine McCann",
       "date": "2007-05-03",
       "location": "Praia da Luz, Portugal",
@@ -15087,6 +15091,7 @@
       "notes": "Despite global media coverage, the case remains unresolved."
     },
     {
+      "id": 4,
       "caseName": "The Black Dahlia",
       "date": "1947-01-15",
       "location": "Los Angeles, California, USA",
@@ -15102,6 +15107,7 @@
       "notes": "The case inspired countless theories but no resolution."
     },
     {
+      "id": 5,
       "caseName": "JonBenét Ramsey",
       "date": "1996-12-26",
       "location": "Boulder, Colorado, USA",
@@ -15117,6 +15123,7 @@
       "notes": "Speculation and public interest remain high, but the case is unsolved."
     },
     {
+      "id": 6,
       "caseName": "The Hinterkaifeck Murders",
       "date": "1922-03-31",
       "location": "Hinterkaifeck, Germany",
@@ -15132,6 +15139,7 @@
       "notes": "One of Germany's most baffling mysteries."
     },
     {
+      "id": 7,
       "caseName": "The Sodder Children",
       "date": "1945-12-24",
       "location": "Fayetteville, West Virginia, USA",
@@ -15147,6 +15155,7 @@
       "notes": "Theories range from kidnapping to accidental death, but no definitive answers exist."
     },
     {
+      "id": 8,
       "caseName": "The Somerton Man (Tamám Shud Case)",
       "date": "1948-12-01",
       "location": "Adelaide, Australia",
@@ -15162,6 +15171,7 @@
       "notes": "Theories include espionage, murder, and suicide."
     },
     {
+      "id": 9,
       "caseName": "D. B. Cooper",
       "date": "1971-11-24",
       "location": "Over Washington State, USA",
@@ -15177,6 +15187,7 @@
       "notes": "The FBI closed the case in 2016 without solving it."
     },
     {
+      "id": 10,
       "caseName": "The Springfield Three",
       "date": "1992-06-07",
       "location": "Springfield, Missouri, USA",
@@ -15190,6 +15201,21 @@
         "Various, none conclusively linked"
       ],
       "notes": "Decades later, the case still haunts the Springfield community."
+    },
+    {
+      "caseName": "",
+      "keyEvidence": [
+        ""
+      ],
+      "date": "",
+      "location": "",
+      "notes": "",
+      "suspects": [
+        ""
+      ],
+      "description": "",
+      "lastKnownActivity": "",
+      "id": 11
     }
   ]
 }

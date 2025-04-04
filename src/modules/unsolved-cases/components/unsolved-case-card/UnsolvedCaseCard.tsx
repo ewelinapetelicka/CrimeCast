@@ -5,6 +5,7 @@ interface UnsolvedCaseCardProps {
 }
 
 export function UnsolvedCaseCard(props: UnsolvedCaseCardProps) {
+
     return (
         <section className={'bg-zinc-700 text-neutral-50 rounded-3xl shadow-inner shadow-neutral-50'}>
             <p className={'p-4'}>{props.unsolvedCase.caseName}</p>

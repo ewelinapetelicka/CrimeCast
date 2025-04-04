@@ -1,10 +1,9 @@
 import {IoCloseOutline, IoSearchOutline} from "react-icons/io5";
 
-
 interface SearchProps {
     onChange: (query: string) => void;
     value: string;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 export function Search(props: SearchProps) {
@@ -19,7 +18,7 @@ export function Search(props: SearchProps) {
                 <IoSearchOutline className={"absolute right-0 mt-2 mr-4 text-neutral-100"} size={24}/>
                 :
                 <IoCloseOutline className={"absolute right-0 mt-2 mr-4 text-neutral-100 hover:cursor-pointer"} size={24}
-                                onClick={() => props.onClick()}/>
+                                onClick={() => props.onClick && props.onClick()}/>
             }
         </section>
     )

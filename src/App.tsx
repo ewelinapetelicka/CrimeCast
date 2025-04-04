@@ -3,6 +3,7 @@ import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import {SerialKillerDetails} from "./modules/serial-killers/pages/SerialKillerDetails.tsx";
 import {UnsolvedCasesList} from "./modules/unsolved-cases/pages/UnsolvedCasesList.tsx";
 import {AppLayout} from "./AppLayout.tsx";
+import {UnsolvedCaseDetails} from "./modules/unsolved-cases/pages/UnsolvedCaseDetails.tsx";
 
 function App() {
     const router = createBrowserRouter([
@@ -22,14 +23,18 @@ function App() {
                     path: "/unsolved-cases",
                     element: <UnsolvedCasesList/>,
                 },
+                {
+                    path: "/unsolved-cases/:id",
+                    element: <UnsolvedCaseDetails/>,
+                },
             ]
         },
-
         {
             path: "*",
             element: <Navigate to={"/serial-killers"}/>
         }
     ]);
+
 
     return (
         <RouterProvider router={router}/>
