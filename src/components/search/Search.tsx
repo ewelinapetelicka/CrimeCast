@@ -13,7 +13,7 @@ export function Search(props: SearchProps) {
                    placeholder={"search..."}
                    onChange={(event) => props.onChange(event.target.value)}
                    value={props.value}
-                   className={"bg-zinc-700 p-2 rounded-2xl shadow-inner shadow-neutral-50 text-amber-50 pr-7"}/>
+                   className={"bg-white bg-opacity-20 p-2 rounded-2xl shadow-inner shadow-neutral-50 text-amber-50 pr-7"}/>
             {!props.value ?
                 <IoSearchOutline className={"absolute right-0 mt-2 mr-4 text-neutral-100"} size={24}/>
                 :
