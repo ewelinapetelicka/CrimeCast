@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# CrimeCast
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**CrimeCast** is a web app for exploring a database of serial killers and unsolved criminal cases. It offers detailed
+profiles, interactive tools, and community-driven content to support crime analysis and discovery.
 
-Currently, two official plugins are available:
+## 🔍 Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application features detailed profiles of offenders, including their background, crime patterns, and documented
+incidents. Users can browse criminal activity through an interactive chronological timeline, quickly locate individuals
+using a search function, and explore crime scenes on a dynamic map interface.
 
-## Expanding the ESLint configuration
+A dedicated **Unsolved Cases** section compiles ongoing investigations. Users are also encouraged to contribute by
+adding new cases, fostering a community-driven expansion of the database.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## ✨ Features
 
-- Configure the top-level `parserOptions` property like this:
+- Interactive timeline to view crimes in chronological order
+- In-depth offender profiles (background, patterns, known incidents)
+- Search functionality to quickly find individuals or cases
+- Map interface to explore crime locations (via OpenLayers)
+- Dedicated section for unsolved/ongoing investigations
+- User submissions for adding new cases
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Tech Stack
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The project was built using modern web technologies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **React 18**
+- **Vite**
+- **TypeScript**
+- **Redux Toolkit**
+- **React Router 6**
+- **TailwindCSS**
+- **OpenLayers** (for map rendering)
+- **JSON Server** (for mock API/backend)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 🚀 Getting Started
+
+To run the project locally:
+
+```bash
+npm install
+npm run dev
+npm run db

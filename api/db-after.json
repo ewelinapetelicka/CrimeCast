@@ -15217,5 +15217,14 @@
       "lastKnownActivity": "",
       "id": 11
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "login": "admin",
+      "password": "admin",
+      "name": "admin",
+      "surname": "admin"
+    }
   ]
 }
