@@ -1,32 +1,11 @@
-import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 import {PageContainer} from "../components/page-container/PageContainer.tsx";
-import axios from "axios";
+import {useLogin} from "../api/auth.query.ts";
 
 export function LoginPage() {
-    const navigate = useNavigate();
     const [username, setUsername] = useState('emilys');
     const [password, setPassword] = useState('emilyspass');
-
-    const handleLogin = () => {
-        axios.post('https://dummyjson.com/auth/login', {
-            username: username,
-            password: password,
-        }, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-            .then(response => {
-                console.log(response.data);
-                navigate("/serial-killers");
-                localStorage.setItem('token', response.data.accessToken)
-
-            })
-            .catch(error => {
-                console.error('There was an error!', error);
-            });
-    }
+    const loginMutation = useLogin();
 
     return (
         <PageContainer class={"flex  justify-center items-center text-white"} scroll={false}>
@@ -47,7 +26,10 @@ export function LoginPage() {
                 />
                 <button
                     className="bg-white bg-opacity-20 rounded-3xl p-3 shadow-inner shadow-neutral-50 w-1/6"
-                    onClick={handleLogin}
+                    onClick={() => loginMutation.mutate({
+                        username,
+                        password
+                    })}
                 >
                     Log In
                 </button>

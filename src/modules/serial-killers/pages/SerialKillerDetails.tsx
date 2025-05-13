@@ -1,7 +1,5 @@
 import {PageContainer} from "../../../components/page-container/PageContainer.tsx";
 import {useEffect, useState} from "react";
-import axios, {AxiosResponse} from "axios";
-import {SerialKiller} from "../../../models/serial-killer.ts";
 import {useParams} from "react-router-dom";
 import {Details} from "../components/details/Details.tsx";
 import {Timeline} from "../components/timeline/Timeline.tsx";
@@ -12,35 +10,29 @@ import {Feature} from "ol";
 import {Point} from "ol/geom";
 import {fromLonLat, toLonLat} from "ol/proj";
 import {Coordinate} from "ol/coordinate";
+import {useGetSerialKillerDetails} from "../api/serial-kiler.query.ts";
 
 export type ViewType = "Timeline" | "Map";
 
 export function SerialKillerDetails() {
-    const [killer, setKiller] = useState<SerialKiller>();
     const [view, setView] = useState<ViewType>('Timeline');
     const [markers, setMarkers] = useState<Feature<Point>[]>([]);
     const [center, setCenter] = useState<Coordinate>()
     const {id} = useParams();
+    const {data, isSuccess} = useGetSerialKillerDetails(id!)
 
     useEffect(() => {
-        axios.get("http://localhost:8000/serialKillers/" + id)
-            .then(function (response: AxiosResponse<SerialKiller>) {
-                setKiller(response.data);
-            })
-    }, []);
-
-    useEffect(() => {
-        if (!killer) {
+        if (!data) {
             return;
         }
-        setMarkers(killer.knownVictims.map((victim) => {
+        setMarkers(data.knownVictims.map((victim) => {
             return createMarker({
                 lon: victim.discoveryLocation.coordinates.longitude,
                 lat: victim.discoveryLocation.coordinates.latitude,
                 name: victim.name
             })
         }))
-    }, [killer]);
+    }, [data]);
 
     useEffect(() => {
         setCenterOfMap()
@@ -57,7 +49,7 @@ export function SerialKillerDetails() {
         setCenter(fromLonLat([lon / markers.length, lat / markers.length]))
     }
 
-    if (!killer) {
+    if (!isSuccess) {
         return;
     }
 
@@ -66,14 +58,14 @@ export function SerialKillerDetails() {
             <section className={"flex justify-evenly pr-3"}>
                 {view === "Timeline" ? (
                     <article className={"text-neutral-50 flex gap-3 "}>
-                        <Details killer={killer} key={killer.id}/>
-                        <Timeline cards={killersToTimelineCardUtils(killer)}
+                        <Details killer={data} key={data.id}/>
+                        <Timeline cards={killersToTimelineCardUtils(data)}
                                   onCloseClick={() => setView("Map")} buttonLabel={'see map'}
-                                  key={killer.id}></Timeline>
+                                  key={data.id}></Timeline>
                     </article>
                 ) : (
                     <MapComponent onCloseClick={() => setView("Timeline")} markers={markers} center={center!}
-                                  key={killer.id}/>
+                                  key={data.id}/>
                 )
                 }
             </section>

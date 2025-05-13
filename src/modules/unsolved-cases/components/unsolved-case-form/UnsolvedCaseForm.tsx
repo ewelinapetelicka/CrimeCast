@@ -2,10 +2,10 @@ import button from "../../../../styles/Button.ts";
 import input from "../../../../styles/Input.ts";
 import {classNameJoin} from "../../../../utils/class-name-join.utils.tsx";
 import {useState} from "react";
-import axios from "axios";
 import {UnsolvedCase} from "../../../../models/unsolved-case.ts";
 import {Chips} from "../../../../components/chips/Chips.tsx";
 import {IoIosClose} from "react-icons/io";
+import {usePostUnresolvedCase} from "../../api/unresolved-case.query.ts";
 
 interface UnsolvedCaseFormProps {
     onBackClicked: () => void;
@@ -24,6 +24,8 @@ export function UnsolvedCaseForm(props: UnsolvedCaseFormProps) {
         lastKnownActivity: ''
     });
 
+    const createUnresolvedCaseMutation = usePostUnresolvedCase()
+
     const errorText = (
         <section className={'w-full h-52 bg-zinc-900 rounded-xl text-neutral-50 flex flex-col'}>
             <button onClick={() => setErrorWindow(false)} className={'self-end p-3'}><IoIosClose/></button>
@@ -31,15 +33,11 @@ export function UnsolvedCaseForm(props: UnsolvedCaseFormProps) {
         </section>
     )
 
-    function addUnsolvedCase() {
-        axios.post('http://localhost:8000/unsolvedCases', unsolvedCase)
-    }
-
     function checkIsValid() {
         if (unsolvedCase.lastKnownActivity < unsolvedCase.date) {
             setErrorWindow(true);
         } else {
-            addUnsolvedCase()
+            createUnresolvedCaseMutation.mutate(unsolvedCase)
         }
     }
 

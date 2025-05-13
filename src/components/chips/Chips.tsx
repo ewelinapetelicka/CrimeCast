@@ -33,7 +33,6 @@ export function Chips(props: ChipsProps) {
                     )
                 })}
                 <input className={'w-full focus:outline-0 bg-transparent h-9 text-neutral-50'} onKeyDown={(event) => {
-                    debugger
                     if (event.key === "Enter") {
                         addNewValue(text!)
                     }

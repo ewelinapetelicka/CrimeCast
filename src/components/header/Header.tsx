@@ -1,33 +1,17 @@
 import {TabButton} from "../tab-button/TabButton.tsx";
 import {IoMenuOutline} from "react-icons/io5";
 import {useNavigate} from "react-router-dom";
-import {useEffect, useState} from "react";
-import axios from "axios";
+import {AUTH_LOGGED_USER_KEY, useGetAuthLoggedUser} from "../../api/auth.query.ts";
+import {queryClient} from "../../api/query-client.ts";
 
 export function Header() {
     const navigate = useNavigate();
-    const isLogged = !!localStorage.getItem('token');
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('')
-
-    useEffect(() => {
-        if (isLogged) {
-            axios.get('https://dummyjson.com/auth/me', {
-                headers: {
-                    'Authorization': 'Bearer ' + localStorage.getItem('token'), // Pass JWT via Authorization header
-                },
-            })
-                .then(response => {
-                    setFirstName(response.data.firstName);
-                    setLastName(response.data.lastName);
-                });
-
-        }
-    }, [isLogged]);
+    const {data, isSuccess} = useGetAuthLoggedUser();
 
     const logOut = () => {
         localStorage.removeItem('token');
         navigate('/login');
+        queryClient.removeQueries({queryKey: [AUTH_LOGGED_USER_KEY]});
     }
 
     return (
@@ -39,11 +23,11 @@ export function Header() {
                     <TabButton label={"Serial killers"} onClick={() => navigate('/serial-killers')}></TabButton>
                     <TabButton label={"Unsolved cases"} onClick={() => navigate('/unsolved-cases')}></TabButton>
                 </section>
-                {isLogged ? (
+                {isSuccess ? (
                     <>
                         <section>
-                            <span>{firstName}</span>
-                            <span>{lastName}</span>
+                            <span>{data.firstName}</span>
+                            <span>{data.lastName}</span>
                         </section>
                         <button className={"text-2xl font-bold pr-6"} onClick={() => logOut()}>
                             <IoMenuOutline/>

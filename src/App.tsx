@@ -1,5 +1,5 @@
 import {SerialKillersList} from "./modules/serial-killers/pages/SerialKillersList.tsx";
-import {createBrowserRouter, Navigate, Outlet, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, Navigate, Outlet, redirect, RouterProvider} from "react-router-dom";
 import {SerialKillerDetails} from "./modules/serial-killers/pages/SerialKillerDetails.tsx";
 import {UnsolvedCasesList} from "./modules/unsolved-cases/pages/UnsolvedCasesList.tsx";
 import {AppLayout} from "./AppLayout.tsx";
@@ -16,6 +16,10 @@ function App() {
             path: "",
             element: <AppLayout/>,
             children: [
+                {
+                    index: true,
+                    loader: async () => redirect("/serial-killers")
+                },
                 {
                     path: "/login",
                     element: <LoginPage/>,
@@ -45,10 +49,8 @@ function App() {
                         }
                     ],
                 },
-
             ]
         },
-
     ]);
 
     return (
