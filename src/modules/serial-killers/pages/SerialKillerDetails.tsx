@@ -57,7 +57,7 @@ export function SerialKillerDetails() {
         <PageContainer class={"flex flex-col justify-between items-center overflow-auto"} scroll={true}>
             <section className={"flex justify-evenly pr-3"}>
                 {view === "Timeline" ? (
-                    <article className={"text-neutral-50 flex gap-3 "}>
+                    <article className={" flex gap-3 "}>
                         <Details killer={data} key={data.id}/>
                         <Timeline cards={killersToTimelineCardUtils(data)}
                                   onCloseClick={() => setView("Map")} buttonLabel={'see map'}

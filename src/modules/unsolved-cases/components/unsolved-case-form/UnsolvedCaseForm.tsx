@@ -2,7 +2,7 @@ import button from "../../../../styles/Button.ts";
 import input from "../../../../styles/Input.ts";
 import {classNameJoin} from "../../../../utils/class-name-join.utils.tsx";
 import {useState} from "react";
-import {UnsolvedCase} from "../../../../models/unsolved-case.ts";
+import {UnsolvedCaseDTO} from "../../../../models/unsolved-case.ts";
 import {Chips} from "../../../../components/chips/Chips.tsx";
 import {IoIosClose} from "react-icons/io";
 import {usePostUnresolvedCase} from "../../api/unresolved-case.query.ts";
@@ -13,7 +13,7 @@ interface UnsolvedCaseFormProps {
 
 export function UnsolvedCaseForm(props: UnsolvedCaseFormProps) {
     const [errorWindow, setErrorWindow] = useState(false);
-    const [unsolvedCase, setUnsolvedCase] = useState<UnsolvedCase>({
+    const [unsolvedCase, setUnsolvedCase] = useState<UnsolvedCaseDTO>({
         caseName: '',
         keyEvidence: [],
         date: '',

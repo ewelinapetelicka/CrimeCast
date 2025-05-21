@@ -1,4 +1,5 @@
 export interface UnsolvedCase {
+    "id": number,
     "caseName": string,
     "date": string,
     "location": string,
@@ -8,3 +9,5 @@ export interface UnsolvedCase {
     "suspects": string[],
     "notes": string
 }
+
+export type UnsolvedCaseDTO = Omit<UnsolvedCase, 'id'>

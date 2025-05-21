@@ -1,6 +1,6 @@
 import {useMutation, useQuery} from "@tanstack/react-query";
 import axios, {AxiosResponse} from "axios";
-import {UnsolvedCase} from "../../../models/unsolved-case.ts";
+import {UnsolvedCase, UnsolvedCaseDTO} from "../../../models/unsolved-case.ts";
 
 export const UNRESOLVED_CASES_KEY = 'unresolvedCases';
 
@@ -18,6 +18,6 @@ export const useGetUnsolvedCaseDetails = (id: string) => useQuery({
 
 export const usePostUnresolvedCase = () => useMutation({
     mutationKey: [UNRESOLVED_CASES_KEY],
-    mutationFn: (unsolvedCase: UnsolvedCase) => axios.post('http://localhost:8000/unsolvedCases', unsolvedCase)
+    mutationFn: (unsolvedCase: UnsolvedCaseDTO) => axios.post('http://localhost:8000/unsolvedCases', unsolvedCase)
 
 })
