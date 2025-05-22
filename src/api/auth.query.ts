@@ -1,6 +1,6 @@
 import {useMutation, useQuery} from "@tanstack/react-query";
-import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import instance from "./axios-instance";
 
 export const AUTH_LOGGED_USER_KEY = 'authLoggedUser';
 
@@ -8,7 +8,7 @@ export const AUTH_LOGIN_USER_KEY = "authLoginUser";
 
 export const useGetAuthLoggedUser = () => useQuery({
     queryKey: [AUTH_LOGGED_USER_KEY],
-    queryFn: () => axios.get('https://dummyjson.com/auth/me', {
+    queryFn: () => instance.get('https://dummyjson.com/auth/me', {
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token'),
         },
@@ -29,7 +29,7 @@ export const useLogin = () => {
         mutationFn: (user: {
             username: string,
             password: string
-        }) => axios.post('https://dummyjson.com/auth/login', user),
+        }) => instance.post('https://dummyjson.com/auth/login', user),
         onSuccess: (response) => {
             navigate("/serial-killers");
             localStorage.setItem('token', response.data.accessToken)
