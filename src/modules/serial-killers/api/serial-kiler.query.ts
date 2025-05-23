@@ -22,7 +22,7 @@ export const useGetSerialKillerList = (paginated: {
     });
 
 export const useGetSerialKillerDetails = (id: string) => useQuery({
-    queryKey: [SERIAL_KILLERS_KEY],
+    queryKey: [SERIAL_KILLERS_KEY, id],
     queryFn: () => axios.get<SerialKiller>("http://localhost:8000/serialKillers/" + id),
     select: (data: AxiosResponse<SerialKiller>) => data.data
 })
