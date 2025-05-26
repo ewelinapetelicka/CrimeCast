@@ -1,5 +1,5 @@
 export interface MapMarker {
-    lon: number;
-    lat: number;
-    name: string
+  lon: number;
+  lat: number;
+  name: string;
 }
