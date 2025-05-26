@@ -36,6 +36,7 @@ export function SerialKillerDetails() {
 
     useEffect(() => {
         setCenterOfMap()
+        // eslint-disable-next-line
     }, [markers]);
 
     function setCenterOfMap() {

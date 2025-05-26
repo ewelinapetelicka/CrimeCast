@@ -38,7 +38,7 @@ export function MapComponent(props: MapProps) {
         mapObj.setTarget(mapRef.current);
         mapObj.addLayer(vectorLayer);
         return () => mapObj.setTarget('');
-    }, []);
+    });
 
     return (
         <section className={"text-neutral-50 pb-3 h-96  w-2/3 relative flex flex-col items-end "}>

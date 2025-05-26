@@ -5,7 +5,7 @@ interface DetailsProps {
 }
 
 export function Details(props: DetailsProps) {
-    function status(status: any) {
+    function status(status: string) {
         if (status !== null && status !== "Alive") {
             return (
                 <div className={"flex flex-col"}>

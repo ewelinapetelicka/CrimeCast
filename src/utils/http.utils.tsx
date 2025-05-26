@@ -1,6 +1,6 @@
-export function createURLWithQueryParams(url: string, queryParams: Record<string, any>): string {
+export function createURLWithQueryParams(url: string, queryParams: Record<string, unknown>): string {
     let query = '?';
-    let keys = Object.keys(queryParams)
+    const keys = Object.keys(queryParams)
 
     for (let i = 0; i < keys.length; i++) {
         const key = keys[i];

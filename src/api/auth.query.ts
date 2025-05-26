@@ -8,12 +8,12 @@ export const AUTH_LOGIN_USER_KEY = "authLoginUser";
 
 export const useGetAuthLoggedUser = () => useQuery({
     queryKey: [AUTH_LOGGED_USER_KEY],
-    queryFn: () => instance.get('https://dummyjson.com/auth/me', {
+    queryFn: () => instance.get<{ firstName: string, lastName: string }>('https://dummyjson.com/auth/me', {
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token'),
         },
     }),
-    select: (data: any) => {
+    select: (data) => {
         return {
             firstName: data.data.firstName,
             lastName: data.data.lastName
